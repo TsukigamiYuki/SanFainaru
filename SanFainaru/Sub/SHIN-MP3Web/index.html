@@ -28,11 +28,11 @@
      <h1>Eientei</h1>
              <nav>
                  <ul>
-                     <li><a href="/index1.html">Home</a></li>
-                     <li><a href="/Sub/FavArti/FavArti/index.html">FavArti</a></li>
-                     <li><a href="/Sub/Canteen/Canteen_/index.html">Canteen Article</a></li>
-                     <li><a href="/Sub/SHIN-MP3Web/index.html">MP3 Player</a></li>
-                     <li><a href="/Contact.html">Contact Us</a></li>
+                     <li><a href="/SanFainaru/index1.html">Home</a></li>
+                     <li><a href="/SanFainaru/Sub/FavArti/FavArti/index.html">FavArti</a></li>
+                     <li><a href="/SanFainaru/Sub/Canteen/Canteen_/index.html">Canteen Article</a></li>
+                     <li><a href="/SanFainaru/Sub/SHIN-MP3Web/index.html">MP3 Player</a></li>
+                     <li><a href="/SanFainaru/Contact.html">Contact Us</a></li>
                      <li id="logout-btn">Log Out<li>
                  </ul>
 
@@ -299,14 +299,14 @@ function selectAlbum(index) {
             // Check if the user is logged in
         if (localStorage.getItem('userLoggedIn') !== 'true') {
             alert('You must log in first.');
-            window.location.href = '/login.html'; // Redirect to login page if not logged in
+            window.location.href = '/SanFainaru/login.html'; // Redirect to login page if not logged in
         }
 
         // Log out functionality
         document.getElementById('logout-btn').addEventListener('click', function() {
             localStorage.setItem('userLoggedIn', 'false'); // Set logged-in status to false
             alert('You have logged out.');
-            window.location.href = '/login.html'; // Redirect to login page after logout
+            window.location.href = '/SanFainaru/login.html'; // Redirect to login page after logout
         });
             
         </script>
