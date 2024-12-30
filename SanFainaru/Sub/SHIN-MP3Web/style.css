@@ -1,0 +1,424 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 0.5s ease;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+header {
+  background-color: rgba(128, 128, 128, 0.9);
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  padding: 5px;
+}
+
+header h1 {
+  font-size: 4.5rem;
+  color: white;
+  font-family: 'Tangerine', cursive;
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+#logout-btn {
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+#logout-btn:hover {
+  color: #d4006a;
+  text-shadow: 0 0 5px d4006a;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #d4006a;
+  text-shadow: 0 0 5px #d4006a;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #332e2e57;
+  padding-top: 20px;
+  display: none;
+
+}
+
+.sidebar.active{
+  display: block;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.album-sidebar .close-button {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: -55px;
+  margin-left: 185px;
+  position: fixed;
+}
+
+.album-sidebar{
+  width: 200px;
+  background-color: #11111100;
+  padding: 15px;
+  color: rgba(255, 255, 255, 0.034);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  margin-top: 50px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.album-sidebar h3{
+  margin-top: 0;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+
+.album-sidebar ul{
+  list-style: none;
+  padding: 5px;
+  margin-bottom: 25vh;
+
+}
+
+.album-sidebar ul li:hover{
+  background-color: #444;
+}
+
+.album-sidebar ul li{
+  padding: 45px;
+  cursor: pointer;
+  background-color: #222;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+.album-item {
+  background-size: cover;
+  background-position: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  -webkit-text-stroke: 1px rgba(20, 20, 20, 0.027);
+  -webkit-text-stroke-width: 15px;
+}
+
+#album1 {
+  background-image: url('Misc/pics/908270.png');
+}
+
+#album2 {
+  background-image: url('Misc/pics/Show-By-Rock-Season-2-Header-001-20160704.webp');
+}
+
+#album3 {
+  background-image: url('Misc/pics/download.jfif');
+}
+
+#album4 {
+  background-image: url('Misc/pics/download 2.jfif');
+}
+
+#album5 {
+  background-image: url('Misc/pics/_16-9_11616.jpg');
+}
+
+.album-item:hover {
+  opacity: 0.8;
+}
+
+
+.main-content {
+  margin: 0 auto;
+  padding: 0;
+  color: hsl(12, 78%, 35%);
+  background: linear-gradient(to right), rgba(255, 255, 255, 0.034), rgb(255, 255, 255), rgba(255, 255, 255, 0.034);
+  width: 100%;
+  height: 100%;
+  padding: 25px 35px;
+}
+
+h1{
+  text-align: center;
+  justify-content: center;
+  font-size: 100px;
+  font-family: 'Tangerine', cursive;
+  text-shadow: -1px -1px 0 hsl(12, 78%, 35%), 1px -1px 0 hsl(12, 78%, 35%), -1px 1px 0 hsl(12, 78%, 35%), 1px 1px 0 hsl(12, 78%, 35%);
+}
+
+.toggle-button {
+  padding: 25px;
+  background-color: transparent;
+  color: white;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+}
+
+.toggle-button.hidden{
+  display: none;
+}
+
+.toggle-button button {
+  padding: 20px 25px;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.418);
+  color: white;
+}
+
+
+#player-container {
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0.205);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 10px auto;
+}
+
+#album-thumbnail {
+  width: 250px;
+  height: 250px;
+  border-radius: 80%;
+  margin-bottom: 10px;
+}
+
+.track-info h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.track-info p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.control-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+  background-color: #5555559d;
+}
+
+.progress-bar-container {
+  margin: 15px 0;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #444;
+  border-radius: 5px;
+  outline: none;
+}
+
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: #5555559d;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#progress-bar::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #5555559d;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.time-info {
+  font-size: 14px;
+  color: #ccc;
+}
+
+#track-list {
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  width: 350px;
+  margin: 20px auto;
+  background-color: rgba(0, 0, 0, 0.205);
+}
+
+#track-list h3 {
+  font-size: 18px;
+}
+
+#track-list-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+#track-list-container li {
+  padding: 10px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.055);
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  overflow-y: auto;
+}
+
+#track-list-container li:hover {
+  background-color: #5555559d;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 1.6rem;
+  }
+
+  header nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  header nav ul li {
+      margin: 0.5em 0;
+  }
+
+  article h2 {
+      font-size: 1.6rem;
+  }
+
+  article .meta {
+      font-size: 0.8rem;
+  }
+
+  article img {
+      margin-bottom: 1.5em;
+  }
+
+  footer p {
+      font-size: 0.8rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 1.4rem;
+  }
+
+  header nav ul li a {
+      font-size: 0.9rem;
+  }
+
+  article h2 {
+      font-size: 1.4rem;
+  }
+
+  article .meta {
+      font-size: 0.75rem;
+  }
+
+  footer p {
+      font-size: 0.75rem;
+  }
+
+  main {
+      padding: 1.5em;
+  }
+}

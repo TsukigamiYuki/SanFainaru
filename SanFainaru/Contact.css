@@ -1,0 +1,212 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: url('Pics/sakura.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: rgba(128, 128, 128, 0);
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+    padding: 5px;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    color: rgb(0, 0, 0);
+    font-family: 'Tangerine', cursive;
+    margin-top: -25px;
+    margin-bottom: -25px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#logout-btn {
+    cursor: pointer;
+    color: #000000;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+#logout-btn:hover {
+    color: #d4006a;
+    text-shadow: 0 0 5px d4006a;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #d4006a;
+    text-shadow: 0 0 5px #d4006a;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem 1.5rem; /* Adjusted padding for better proportions */
+    border-radius: 10px; /* Slightly more rounded corners for aesthetics */
+    width: 90%; /* Relative width for better responsiveness */
+    max-width: 400px; /* Maximum width for larger screens */
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    
+}
+
+.contact-container h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3.5rem; /* Larger font size for better readability */
+    color: #333333;
+    
+}
+
+.contact-container label {
+    display: block;
+    margin: 0.5rem 0 0.3rem; /* Slightly increased margin for better spacing */
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 0.8rem; /* Slightly larger padding for better usability */
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Slightly more rounded */
+    font-size: 1rem;
+    outline: none; /* Removes default focus outline */
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border-color: #0078d7; /* Highlighted border on focus */
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.5);
+}
+
+.contact-container button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #0078d7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-container button:hover {
+    background: #005bb5;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+/* Adjustments for smaller devices */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 0.5em 0;
+    }
+
+    .contact-container {
+        padding: 1.5rem 1rem;
+        max-width: 90%; /* Ensures box doesn't look too wide on smaller devices */
+    }
+
+    .contact-container h1 {
+        font-size: 1.8rem; /* Slightly reduced font size */
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+        padding: 0.7rem; /* Slightly reduced padding for smaller devices */
+    }
+
+    .contact-container button {
+        padding: 0.7rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .contact-container {
+        padding: 1rem; /* Further reduced padding for mobile devices */
+    }
+
+    .contact-container h1 {
+        font-size: 1.6rem; /* Further reduced for mobile screens */
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+        padding: 0.6rem;
+    }
+
+    .contact-container button {
+        padding: 0.6rem;
+    }
+
+    footer p {
+        font-size: 0.75rem;
+    }
+}

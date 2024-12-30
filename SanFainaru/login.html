@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <header>
+            <h1>Login to Eientei</h1>
+        </header>
+
+        <main>
+            <form id="login-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Log In</button>
+            </form>
+            
+            <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Eientei. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle the login form submission
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (email && password) {
+                // Simulate a login process
+                localStorage.setItem('userLoggedIn', 'true'); // Set logged-in status
+                alert('Login successful!');
+
+                // Redirect to the index page
+                window.location.href = 'index1.html';
+            } else {
+                alert('Please fill in both fields!');
+            }
+        });
+    </script>
+</body>
+</html>
